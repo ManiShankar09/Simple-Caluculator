@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adder</title>
+    </head>
+    <style>
+        .container{
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+            height: 40vh;
+            margin-top: 250px;
+            margin-left: 500px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 3px 1px 20px 1px rgb(44, 49, 49);
+        }
+        input[type = text]{
+            margin-top: 20px;
+            line-height: 2;
+            border-radius: 5px;
+            border-color: lightgray;
+        }
+        #btn1,#btn2,#btn3,#btn4{
+            background-color: aqua;
+            border-style: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            position: relative;
+            text-decoration: solid;
+            font-weight: 500px;
+            font-size: medium;
+        }
+        #btn1:active{
+            background-color: orange;
+            transition: 0.8s;
+        }
+        #btn2:active{
+            background-color: orange;
+            transition: 0.8s;
+        }
+        #btn3:active{
+            background-color: orange;
+            transition: 0.8s;
+        }
+        #btn4:active{
+            background-color: orange;
+            transition: 0.8s;
+        }
+        p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        input[type=text]{
+            outline: none;
+            border: 2px solid green;
+        }
+        input[type=text]:focus{
+            background-color: rgb(106, 115, 194);
+            color: white;
+            transition: 0.4s;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+
+    </style>
+    <script>
+        function addnum(){
+            var x = parseInt(document.getElementById('ip1').value);
+            var y = parseInt(document.getElementById('ip2').value);
+            var sum = x+y;
+            document.getElementById('op').value = sum
+        }
+        function subnum(){
+            var a = parseInt(document.getElementById('ip1').value);
+            var b = parseInt(document.getElementById('ip2').value);
+            var sum = a-b;
+            document.getElementById('op').value = sum
+   
+        }
+        function multiply(){
+            var c = parseInt(document.getElementById('ip1').value);
+            var d = parseInt(document.getElementById('ip2').value);
+            var sum = c*d;
+            document.getElementById('op').value = sum
+
+        }
+        function divide() {
+            var e = parseInt(document.getElementById('ip1').value);
+            var f = parseInt(document.getElementById('ip2').value);
+            var sum = e/f;
+            document.getElementById('op').value = sum
+
+            
+        }
+    </script>
+    <body>
+        <div class="container">
+            <div class="main">
+                <h2>Simple Caluculator</h2>
+                <p>First Num: <input type="text" id="ip1" autocomplete="off"></p>
+                <p>Second Num: <input type="text" id="ip2" autocomplete="off"></p>
+                <p id="res">Result :  <input type="text" id="op" autocomplete="off"></p>
+                
+
+                <button id="btn1" onclick="addnum()">Add</button>
+                <button id="btn2" onclick="subnum()">Subtract</button>
+                <button id="btn3" onclick="multiply()">Multiply</button>
+                <button id="btn4" onclick="divide()">Divide</button>
+            </div>
+        </div>
+    </body>
+</html>
